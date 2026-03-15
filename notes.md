@@ -27,6 +27,8 @@ Evaluate 2 things:
 
 > [Refer SDG HUB Knowledge Generation example](https://github.com/Red-Hat-AI-Innovation-Team/sdg_hub/tree/main/examples/knowledge_tuning/enhanced_summary_knowledge_tuning)
 
+- For now we used: GLM-4.7-fp8
+
 ## Tools
 
 Input Tool Definition  
@@ -73,7 +75,7 @@ Input Tool Definition
 
 | Model | Internal QA Eval (Knowledge) | IF-eval (Chat) |
 |---|---|---|
-| Qwen3-4B-Instruct |  | 82.25% |
+| Qwen3-4B-Instruct | 3% | 82.25% |
 | + original-dataset [30%] + midtrain (70%) |  |  |
 | + original-dataset [30%] + midtrain (70%) + distill |  |  |
 

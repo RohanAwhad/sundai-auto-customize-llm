@@ -76,7 +76,7 @@ Input Tool Definition
 | Model | Internal QA Eval (Knowledge) | IF-eval (Chat) |
 |---|---|---|
 | Qwen3-4B-Instruct | 3% | 82.25% |
-| + original-dataset [30%] + midtrain (70%) |  | 58% |
+| + original-dataset [30%] + midtrain (70%) | 17% | 58% |
 | + original-dataset [30%] + midtrain (70%) + distill |  |  |
 
 

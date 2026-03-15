@@ -6,7 +6,11 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "dotenv>=0.9.9",
+    "instruction-following-eval",
     "jupyter>=1.1.1",
     "training-hub[lora]>=0.6.0",
     "wandb>=0.25.1",
 ]
+
+[tool.uv.sources]
+instruction-following-eval = { git = "https://github.com/josejg/instruction_following_eval.git" }

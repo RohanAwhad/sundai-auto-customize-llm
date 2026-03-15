@@ -1,0 +1,5 @@
+.env
+.venv
+test-run
+unsloth_compiled_cache
+wandb

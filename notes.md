@@ -70,6 +70,19 @@ Input Tool Definition
 # Evaluation:
 
 
+
+| Model | Internal QA Eval (Knowledge) | IF-eval (Chat) |
+|---|---|---|
+| Qwen3-4B-Instruct |  | 82.25% |
+| + original-dataset [30%] + midtrain (70%) |  |  |
+| + original-dataset [30%] + midtrain (70%) + distill |  |  |
+
+
+
+> * For QA Eval we use llm-as judge for binary scoring 
+> * we are reporting prompt-level strict accuracy for IF-Eval 
+
+
 Example from on-policy blog. This is how we will show our results!
 
 | Model | Internal QA Eval (Knowledge) | IF-eval (Chat) |

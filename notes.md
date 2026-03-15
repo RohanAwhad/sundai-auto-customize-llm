@@ -4,17 +4,19 @@
 Model:
   - Qwen/Qwen3-4B-Instruct-2507
   - 
-Which Tool:
-Which knowledge (set of docs):
+
+Which Tool:  
+Which knowledge (set of docs):  
 
 Evaluate 2 things:
+
 1. Knowledge about new tool/docs:
   - How to evaluate new knowledge customized model?
     - Internal QA
   - How to evaluate new tool customized model?
     - Hermes like tool calling evaluation?
 
-2. General Knowledge that model possessed before the customization:
+2. General Knowledge that model possessed before the customization:  
   - How do we evaluate previous skills/knowledge recall
     - IF-Eval
 
@@ -27,34 +29,34 @@ Evaluate 2 things:
 
 ## Tools
 
-Input Tool Definition
-  name:  openclaw agents
-  description: Use this for creating/ configuring agents
-  arguments:...
+Input Tool Definition  
+  name:  openclaw agents  
+  description: Use this for creating/ configuring agents  
+  arguments:...  
 
 
-LLM-generated Scenarios based on definition:
-- create an data analysis agent
-- create an code gent
+- LLM-generated Scenarios based on definition:
+  - create an data analysis agent
+  - create an code gent
 
-Based on the scenarios generate user messages 
+- Based on the scenarios generate user messages 
 
-Based on the user messages generate conversation traces
+- Based on the user messages generate conversation traces
 
-Clean conversation traces:
-- Remove skill prompt from system prompt
-- Remove tool exploration from the conversation history
+- Clean conversation traces:
+  - Remove skill prompt from system prompt
+  - Remove tool exploration from the conversation history
 
-Expected Output Trace [single turn]:
+- Expected Output Trace [single turn]:
 
-- System prompt [basic/general]
-- Human Message
-- Successful attempt of assistant on calling those tools
-- Tool Response
-- Assistant response to the human
+  - System prompt [basic/general]
+  - Human Message
+  - Successful attempt of assistant on calling those tools
+  - Tool Response
+  - Assistant response to the human
 
 
-Data Mixing [30% original dataset + 70% new dataset]
+> Data Mixing [30% original dataset + 70% new dataset]
 
 # Training
 
@@ -65,6 +67,21 @@ Data Mixing [30% original dataset + 70% new dataset]
 ## On-policy Distillation
 
 
+# Evaluation:
+
+
+Example from on-policy blog. This is how we will show our results!
+
+| Model | Internal QA Eval (Knowledge) | IF-eval (Chat) |
+|---|---|---|
+| Qwen3-8B | 18% | 85% |
+| + midtrain (100%) | 43% | 45% |
+| + original-dataset [30%] + midtrain (70%) | 36% | 79% |
+| + original-dataset [30%] + midtrain (70%) + distill | 41% | 83% |
+
+
+
+
 
 ---
 
@@ -72,6 +89,6 @@ Data Mixing [30% original dataset + 70% new dataset]
 
 - [Document Knowledge Ingestion](https://github.com/Red-Hat-AI-Innovation-Team/sdg_hub/tree/main/examples/knowledge_tuning/enhanced_summary_knowledge_tuning)
 - [On-Policy Distillation](https://thinkingmachines.ai/blog/on-policy-distillation/)
-- Hermes Tool calling dataset
+- [Hermes Tool calling dataset](https://huggingface.co/datasets/NousResearch/hermes-function-calling-v1)
 - [Toucan paper](https://arxiv.org/abs/2510.01179): "Our pipeline first produces a broad spectrum of tool-use queries using five distinct models, applies model-based quality filtering, and then generates agentic trajectories with three teacher models using two agentic frameworks. Rigorous rule-based and model-based validation ensures high-quality outputs."
 

@@ -85,14 +85,14 @@ Input Tool Definition
 > * we are reporting prompt-level strict accuracy for IF-Eval 
 
 
-Example from on-policy blog. This is how we will show our results!
+<!-- Example from on-policy blog. This is how we will show our results! -->
 
-| Model | Internal QA Eval (Knowledge) | IF-eval (Chat) |
+<!-- | Model | Internal QA Eval (Knowledge) | IF-eval (Chat) |
 |---|---|---|
 | Qwen3-8B | 18% | 85% |
 | + midtrain (100%) | 43% | 45% |
 | + original-dataset [30%] + midtrain (70%) | 36% | 79% |
-| + original-dataset [30%] + midtrain (70%) + distill | 41% | 83% |
+| + original-dataset [30%] + midtrain (70%) + distill | 41% | 83% | -->
 
 
 

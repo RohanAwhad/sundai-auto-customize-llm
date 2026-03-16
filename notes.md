@@ -27,7 +27,18 @@ Evaluate 2 things:
 
 > [Refer SDG HUB Knowledge Generation example](https://github.com/Red-Hat-AI-Innovation-Team/sdg_hub/tree/main/examples/knowledge_tuning/enhanced_summary_knowledge_tuning)
 
-- For now we used: GLM-4.7-fp8
+What dataset did we use?
+
+We used data from 24 articles in the QuALITY benchmark dataset. 
+The pipeline runs 4 flows 
+1. extractive summary
+2. detailed summary
+3. key facts
+4. document-direct QA
+
+Our run produced 2190 QA Training Samples
+
+- For now we used: GLM-4.7-fp8 as the data generator model
 
 ## Tools
 

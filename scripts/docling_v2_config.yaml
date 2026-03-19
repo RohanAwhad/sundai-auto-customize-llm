@@ -7,12 +7,19 @@ export:
     text: false
 pipeline:
   ocr:
+    backend: torch
+    engine: rapidocr
     enabled: true
     languages:
     - en
     - ja
   performance:
-    device: auto
+    device: cuda
+    devices: all
+    layout_batch_size: 32
+    ocr_batch_size: 16
+    page_batch_size: 32
+    table_batch_size: 4
     threads: 4
   tables:
     cell_matching: true

@@ -8,13 +8,10 @@ import os
 import torch
 import torch.nn.functional as F
 
-from peft import PeftConfig
 from transformers import AutoModelForCausalLM
 
-STUDENT_MODEL_NAME = "./knowledge-ingestion-test/model/checkpoint-178"
-assert os.path.exists(STUDENT_MODEL_NAME), "Student model not found"
-config = PeftConfig.from_pretrained(STUDENT_MODEL_NAME)
-model = AutoModelForCausalLM.from_pretrained(config.base_model_name_or_path, torch_dtype=torch.bfloat16, device_map="auto")
+model_name = 'Qwen/Qwen3-4B-Instruct-2507'
+model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.bfloat16, device_map="auto")
 model.eval()
 
 # generate logprobs

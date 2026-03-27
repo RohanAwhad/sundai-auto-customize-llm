@@ -3,3 +3,7 @@
 test-run
 unsloth_compiled_cache
 wandb
+data/research_papers_md/
+data/research_papers/
+data/seed_data.jsonl
+extractive_summary
